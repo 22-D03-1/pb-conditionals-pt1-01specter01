@@ -1,16 +1,18 @@
+const lowerLimit = 50;
+const upperLimit = 99;
 const int1 = 50; //1
 const int2 = 66;
 
-if (int1 >= 50 && int1 <= 99 && int2 >= 50 && int2 <= 99) console.log(true);
+const istInit1Zwischen50Und90 = int1 >= lowerLimit && int1 <= upperLimit;
+const istInit2Zwischen50Und90 = int2 >= lowerLimit && int2 <= upperLimit;
+if (istInit1Zwischen50Und90 || istInit2Zwischen50Und90) console.log("1", true); //1
 
 const int3 = 77; //2
+////const
 if (
-    int1 >= 50 &&
-    int1 <= 99 &&
-    int2 >= 50 &&
-    int2 <= 99 &&
-    int3 >= 50 &&
-    int3 <= 99
+    istInit3Zwischen50Und90 ||
+    istInit2Zwischen50Und90 ||
+    istInit1Zwischen50Und90
 )
     console.log(true);
 
@@ -35,10 +37,11 @@ if (int3 > int2) console.log("int3 is greater than int2");
 console.log("int3 is greates"); //3
 
 const str = "thon"; //4
-if (str.includes("Py")) {
-    console.log("thon");
+const positionVonPy = str.indexOf("Py");
+if (positionVonPy === 0) {
+    console.log(str);
 } else {
-    console.log("Python");
+    console.log("Py", str);
 }
 
 const sum1And2 = int1 + int2; //5
