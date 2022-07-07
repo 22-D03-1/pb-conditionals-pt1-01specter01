@@ -40,3 +40,13 @@ if (str.includes("Py")) {
 } else {
     console.log("Python");
 }
+
+const sum1And2 = int1 + int2; //5
+if (sum1And2 >= 50 && sum1And2 <= 80) {
+    console.log(65);
+} else {
+    console.log(65);
+}
+
+const int4 = 20;
+const int5 = 55; //6
